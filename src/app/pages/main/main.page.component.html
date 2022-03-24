@@ -1,0 +1,36 @@
+<ng-container
+    [ngTemplateOutlet]="mainTemplate"
+    [ngTemplateOutletContext]="{
+        weathers: weathers$ | async,
+        isLoading: isLoading$ | async,
+        error: error$ | async
+    }">
+</ng-container>
+
+<ng-template
+  #mainTemplate
+  let-weathers="weathers"
+  let-error="error"
+  let-isLoading="isLoading">
+    <div class="city-container">
+        <ng-container *ngIf="!isLoading; else loaderTemplate">
+            <ng-container *ngIf="!error; else errorTemplate">
+                <app-city-card
+                    *ngFor="let weather of weathers"
+                    [cityWeather]="weather"
+                    (click)="goToForecast(weather.name)"
+                    class="city-card">
+                </app-city-card>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-template>
+
+
+<ng-template #loaderTemplate>
+    <app-fullscreen-loader></app-fullscreen-loader>
+</ng-template>
+
+<ng-template #errorTemplate>
+    <app-fullscreen-error></app-fullscreen-error>
+</ng-template>

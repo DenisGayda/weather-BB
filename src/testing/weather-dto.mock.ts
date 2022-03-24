@@ -1,0 +1,15 @@
+export const weatherDtoMock = {
+	'coord': {'lon': 2.3488, 'lat': 48.8534},
+	'weather': [{'id': 800, 'main': 'Clear', 'description': 'clear sky', 'icon': '01d'}],
+	'base': 'stations',
+	'main': {'temp': 15.78, 'feels_like': 14.64, 'temp_min': 14.32, 'temp_max': 16.28, 'pressure': 1016, 'humidity': 47},
+	'visibility': 10000,
+	'wind': {'speed': 4.63, 'deg': 140},
+	'clouds': {'all': 0},
+	'dt': 1646932080,
+	'sys': {'type': 2, 'id': 2041230, 'country': 'FR', 'sunrise': 1646892895, 'sunset': 1646934430},
+	'timezone': 3600,
+	'id': 2988507,
+	'name': 'Paris',
+	'cod': 200,
+};

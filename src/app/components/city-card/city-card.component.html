@@ -1,0 +1,26 @@
+<div *ngIf="!!cityWeather" class="card-container">
+    <div class="card-header">
+        <div>
+            <div class="city">{{ cityWeather.name }}</div>
+            <div class="description">{{ cityWeather.description }}</div>
+        </div>
+        <img [src]="cityWeather.weather_icon_url" alt="cityWeather icon">
+    </div>
+    <div class="info">
+        <span>Temperature</span>
+        <span>{{ cityWeather.temperature }} °C</span>
+    </div>
+
+    <div class="info">
+        <span>Humidity</span>
+        <span>{{ cityWeather.humidity }} %</span>
+    </div>
+
+    <div class="info">
+        <span>Wind</span>
+        <app-wind-info
+            [speed]="cityWeather.wind_speed"
+            [deg]="cityWeather.wind_direction_deg">
+        </app-wind-info>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  z-index: 1;
+}
+
+.title {
+  align-items: center;
+  color: $white;
+  font-size: 6 * $space;
+  font-family: $brash-family;
+}

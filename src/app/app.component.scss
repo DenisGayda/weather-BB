@@ -1,0 +1,17 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  height: $header-height;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: $footer-height;
+}

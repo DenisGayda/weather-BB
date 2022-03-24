@@ -1,0 +1,22 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: flex;
+  width: 100%;
+  background-color: $dark-blue;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo {
+  width: 12 * $space;
+  height: 12 * $space;
+  margin-left: 5 * $space;
+}
+
+.title {
+  margin-left: 5 * $space;
+  color: $white;
+  font-size: 9 * $space;
+  font-family: $brash-family;
+}

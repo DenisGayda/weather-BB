@@ -1,0 +1,31 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+
+.loader {
+  position: absolute;
+  border: 16px solid $dark-blue;
+  border-top-color: $light-yellow;
+  border-radius: 50%;
+  width: 30 * $space;
+  height: 30 * $space;
+  animation: spin 2s linear infinite;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -15 * $space;
+  margin-left: -15 * $space;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,55 @@
+<div *ngIf="forecast" class="daily-forecast">
+    <div class="date">
+        <span class="month-day">{{ forecast.day }}</span>
+        <span>{{ month }}</span>
+    </div>
+    <div class="table">
+        <div class="table-headers table-row">
+            <div class="table-cell">
+                <img
+                    class="table-header-icon"
+                    src="../../../assets/images/clock.png"
+                    alt="time icon">
+            </div>
+            <div class="table-cell">
+                <img
+                    class="table-header-icon"
+                    src="../../../assets/images/thermometer.png"
+                    alt="thermometer icon">
+            </div>
+            <div class="table-cell">
+                <img
+                    class="table-header-icon"
+                    src="../../../assets/images/humidity.png"
+                    alt="humidity icon">
+            </div>
+            <div class="table-cell">
+                <img
+                    class="table-header-icon"
+                    src="../../../assets/images/wind.png"
+                    alt="wind direction icon">
+            </div>
+        </div>
+        <div class="table-body">
+            <div *ngFor="let item of forecast.info" class="table-row">
+                <div class="table-cell">
+                    <span>{{ item.date.timeString }}</span>
+                </div>
+                <div class="table-cell">
+                    <span>{{ item.temperature }}</span>
+                </div>
+
+                <div class="table-cell">
+                    <span>{{ item.humidity }}</span>
+                </div>
+
+                <app-wind-info
+                    [speed]="item.wind_speed"
+                    [deg]="item.wind_direction_deg"
+                    class="table-cell">
+                </app-wind-info>
+            </div>
+        </div>
+    </div>
+</div>
+

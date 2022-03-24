@@ -1,0 +1,51 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: block;
+}
+
+.daily-forecast {
+  display: flex;
+  border: 2px solid $dark-blue;
+  border-radius: 2 * $space;
+  background: linear-gradient(to bottom, #b7eaff 0%, $light-yellow 100%);
+}
+
+.table {
+  width: calc(100% - 200px);
+  border-left: 2px solid $dark-blue;
+}
+
+.table-row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 4 * $space;
+}
+
+.table-headers {
+  border-bottom: 2px solid $dark-blue;
+}
+
+.table-header-icon {
+  width: 5 * $space;
+  height: 5 * $space;
+}
+
+.date {
+  width: 50 * $space;
+  color: $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table-cell {
+  text-align: center;
+  padding: $space;
+}
+
+.month-day {
+  font-size: 15 * $space;
+}

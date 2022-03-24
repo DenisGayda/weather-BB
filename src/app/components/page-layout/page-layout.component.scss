@@ -1,0 +1,8 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: block;
+  margin-top: $header-height;
+  margin-bottom: $footer-height;
+  padding: 6 * $space;
+}

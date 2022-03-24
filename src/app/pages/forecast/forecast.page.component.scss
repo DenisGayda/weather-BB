@@ -1,0 +1,41 @@
+@import "~src/assets/styles/variables";
+
+:host {
+  display: block;
+  margin-top: 10 * $space;
+}
+
+.daily-forecast {
+  margin-bottom: 5 * $space;
+}
+
+.forecast-header {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 10 * $space;
+  left: 0;
+  top: $header-height;
+  background: $light-yellow;
+  z-index: 1;
+  color: $dark-blue;
+  font-size: 6 * $space;
+  font-family: $brash-family;
+  line-height: 10 * $space;
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  left: 5 * $space;
+  top: $space;
+  height: 8 * $space;
+  width: 25 * $space;
+  background: $light-yellow;
+  color: $dark-blue;
+  outline: none;
+  border: 2px solid $dark-blue;
+  border-radius: $space;
+  font-weight: bold;
+  cursor: pointer;
+}
